@@ -1,0 +1,59 @@
+.control-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  .control-panel {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .control-group {
+    display: flex;
+    align-items: center;
+  }
+  
+  .control-group i {
+    margin-left: 10px;
+    color: #007bff;
+  }
+  
+  .control-panel label {
+    margin-right: 10px;
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .control-panel select {
+    padding: 8px 12px;
+    font-size: 16px;
+    border-radius: 6px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: border-color 0.2s ease-in-out;
+  }
+  
+  .control-panel select:hover {
+    border-color: #999;
+  }
+  
+  .control-panel select:focus {
+    border-color: #007BFF;
+  }
+  
+  .control-panel select:active {
+    transform: scale(1.02);
+  }
+  
+  

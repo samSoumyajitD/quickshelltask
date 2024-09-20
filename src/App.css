@@ -1,38 +1,99 @@
-.App {
+/* Main Kanban Board Styling */
+.kanban-board {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  font-family: 'Roboto', sans-serif;
+  background-color: #f0f2f5;
+  min-height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Board Columns Container */
+.board-columns {
+  display: flex;
+  justify-content: space-around; /* Distributes columns evenly */
+  gap: 15px;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto; /* Centers the board horizontally */
+}
+
+/* Single Column Styling */
+.column {
+  background-color: #ffffff;
+  padding: 15px; /* Slightly smaller padding */
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 28%; /* Slightly smaller width */
+  min-width: 260px; /* Adjusts to smaller screen sizes */
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 20px; /* Adds margin for better spacing between rows on smaller screens */
+}
+
+.column:hover {
+  transform: translateY(-5px); /* Adds subtle lift effect on hover */
+}
+
+/* Column Header */
+.column h2 {
+  margin-top: 0;
+  font-size: 18px;
+  color: #333;
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* Ticket Card Styling */
+.ticket {
+  background-color: #fafafa;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  margin-bottom: 10px;
+  transition: box-shadow 0.3s;
+  cursor: pointer;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.ticket:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.ticket h3 {
+  margin: 0 0 10px 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.ticket p {
+  margin: 5px 0;
+  color: #666;
+}
+
+/* Smaller font size and cleaner layout for ticket details */
+.ticket small {
+  font-size: 14px;
+  color: #999;
+}
+
+@media (max-width: 1200px) {
+  .column {
+    flex: 1 1 30%; /* Fit more columns on larger screens */
+    max-width: 30%;
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 900px) {
+  .column {
+    flex: 1 1 45%;
+    max-width: 45%; /* Two columns per row */
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 600px) {
+  .column {
+    flex: 1 1 100%; /* Single column on small screens */
+    max-width: 100%;
   }
 }
